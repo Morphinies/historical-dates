@@ -1,0 +1,87 @@
+@import "./const.scss";
+
+body,
+html,
+#root {
+	min-height: 100dvh;
+}
+
+html {
+	font-size: 20px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	user-select: none;
+	scrollbar-gutter: stable;
+}
+
+body {
+	position: relative;
+	color: $fontMainColor;
+	font-family: "PTSans";
+	background-color: $bgMainColor;
+}
+
+.swiper {
+	cursor: grab;
+	&:active {
+		cursor: grabbing;
+	}
+}
+
+.swiper-pagination-bullet {
+	width: 6px !important;
+	height: 6px !important;
+	&-active {
+		background-color: #42567a !important;
+	}
+}
+
+.swiper-pagination {
+	display: none;
+}
+
+@font-face {
+	font-weight: 400;
+	font-family: "PTSans";
+	src: url("../assets/fonts/PTSans/PTSans-Regular.ttf");
+}
+
+@font-face {
+	font-weight: 700;
+	font-family: "PTSans";
+	src: url("../assets/fonts/PTSans/PTSans-Bold.ttf");
+}
+
+@font-face {
+	font-weight: 400;
+	font-family: "BebasNeue";
+	src: url("../assets/fonts/BebasNeue/BebasNeue-Regular.ttf");
+}
+
+@media (max-width: 1060px) {
+	html {
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 830px) {
+	html {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 650px) {
+	.swiper {
+		padding-bottom: 10rem !important;
+	}
+	.swiper-pagination {
+		display: block;
+	}
+}
+
+@media (max-width: 320px) {
+	html {
+		min-width: 320px;
+		overflow: auto;
+	}
+}

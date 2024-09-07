@@ -1,0 +1,52 @@
+@import "src/styles/const.scss";
+
+.pagination {
+	gap: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.pagesText {
+	font-size: 14px;
+}
+
+.btnsWrap {
+	gap: 1rem;
+	z-index: 9;
+	display: flex;
+}
+
+.btn {
+	width: 2.5rem;
+	display: flex;
+	transition: $trans;
+	align-items: center;
+	aspect-ratio: 1 / 1;
+	border-radius: 100px;
+	justify-content: center;
+	border: $borderSecondary;
+	background-color: transparent;
+	&:disabled {
+		opacity: 0.5;
+	}
+}
+
+.iconArrow {
+	width: 25%;
+	height: 25%;
+	object-fit: contain;
+}
+
+@media (max-width: 650px) {
+	.btnsWrap {
+		gap: 0.595rem;
+	}
+	.btn {
+		width: 1.786rem;
+		width: 1.786rem;
+	}
+	.pagination {
+		gap: 0.8rem;
+	}
+}
